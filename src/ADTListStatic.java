@@ -31,7 +31,8 @@ public class ADTListStatic {
         System.out.println();
 
         ADTListStatic orderedList = new ADTListStatic();
-
+        orderedList.insert(3);
+        orderedList.insert(4);
         orderedList.insert(5);
         orderedList.insert(2);
         orderedList.insert(6);
@@ -76,7 +77,7 @@ public class ADTListStatic {
             System.out.println("List is full.");
         } else {
             int index = 0;
-            for (int pos = numItems; pos == index; pos--) { // == is used instead of >= because its unnecessary
+            for (int pos = numItems; pos >= index; pos--) { // >= is used instead of >= because its unnecessary
                 // moves the values one index to the left everytime a new value is added
                 items[pos + 1] = items[pos]; // this might throw an error if maxItems is less than 2 items.
             }
